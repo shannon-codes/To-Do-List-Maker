@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>To Do List Maker</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="myScript.js"></script>
+<!-- Assignment By AW and SL -->
+    
+	 <style>
+	    body{font-family: arial;background-color: lightyellow;}
+		textarea{background-color: lavender;}
+	    #myListForm { display: none;}
+		input{background-color: lavender; margin: 10px;padding: 10px;}
+		h1{text-align: center;}
+		fieldset{display:inline-block; border: thin solid black;}
+		#leftSide{float:left; border: thick dotted black; margin-top:1%; margin-left: 1%; padding:1%; box-shadow: 5px 5px 10px #999;}
+		#rightSide{display: inline-block; margin-top: 1%; margin-left:10%; padding:1%;}
+
+	 </style>
+	</head>
+	<body>
+		<div id="leftSide">
+	<h3>TO DO LIST MAKER</h3>
+
+<form name="userDataForm" method="get" onSubmit="index.html" action="" >
+	<input type="text" id="name" name="name" min="0" max="50" placeholder= "Name" focus><br>
+	<input type="date" id="date" placeholder= "yyyy-mm-dd" name="date" ><br>
+	<input type="email" id="email" name="email" placeholder="Email"><br>
+<br><br>Category<br>
+		<p><label><input type="radio" name="category" value="Grocery List" checked><span>Groceries</span></label>
+		<label><input type="radio" name="category" value="School work"><span>School</span></label>
+		<label><input type="radio" name="category" value="Bucket List"><span>Bucket List</span></label><br><br>
+	
+    <input id="enter" type="submit" value="Create List">
+	<input id="reset" type="reset" value="Reset">
+</form>
+</div>
+<div id="rightSide">
+<h3 id="tasks"></h3>
+<form id="myListForm" name="myListForm" method="get" onSubmit="index.html">
+<fieldset><legend>Write a new task</legend>
+	<textarea id="toDoList" class="todolist"  name="todolist" rows="2" cols="40" placeholder="Write a new Task"></textarea></fieldset>
+<input id = "button" name ="button" class="sr" type="submit" value="Add Task">
+</form>
+
+<ul id="listOutputArea"></ul>
+</div>
+</body>
+</html>
+</html>
